@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: myservers
   become: yes
   tasks:
   - name: install webserver on ubuntu
@@ -8,7 +8,7 @@
      state: present
     when: ansible_os_family=="Debian"
 
-  - name: stert webservice on ubuntu
+  - name: start webservice on ubuntu
     service:
      name: "{{myubuntupackubuntu}}"
      state: started
