@@ -2,25 +2,25 @@
 - hosts: all
   become: yes
   tasks:
-  - name: install webserver
+  - name: install webserver on ubuntu
     apt:
      name: apache2
      state: present
     when: ansible_os_family=="Debian"
 
-  - name: install webserver
+  - name: stert webservice on ubuntu
     service:
      name: apache2
      state: started
     when: ansible_os_family=="Debian"  
 
-  - name: install webserver
+  - name: install webserver on RedHat
     yum:
      name: httpd
      state: present
     when: ansible_os_family=="RedHat"
 
-  - name: install webserver
+  - name: start webservice on RedHat
     service:
      name: apache2
      state: started
