@@ -3,5 +3,5 @@
 myubuntupackubuntu: apche2
 myubuntupackredhat: httpd
 
-myjavapackforubuntu: openjdk-8jre
+myjavapackforubuntu: openjdk-8-jre
 myjavapackforredhat: java-1.8.0-openjdk
