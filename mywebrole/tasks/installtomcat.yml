@@ -1,0 +1,19 @@
+---
+- name: download tomcat url 
+  get_url:
+   name: https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.5/bin/apache-tomcat-8.5.5.tar.gz
+   dest: /home/ubuntu/apache-tomcat-8.5.5.tar.gz
+   force_basic_auth: yes
+
+- name: create tomcat folder
+  file:
+   path: /opt/tomcat
+   state: directory
+
+- name: extract tarfile
+  command:
+   cmd: sudo tar xzvf /home/ubuntu/apache-tomcat-8.5.5.tar.gz -C /opt/tomcat --strip-components=1
+   creates: /opt/tomcat/LICENSE
+   
+
+

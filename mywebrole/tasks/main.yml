@@ -1,2 +1,10 @@
 ---
 # tasks file for mywebrole
+
+- include_tasks: installjava.yml
+- include_tasks: createtomuser.yml
+- include_tasks: installtomca.yml
+- include_tasks: permissions.yml
+- include_tasks: servicefile.yml
+- include_tasks: starttomcat.yml
+
