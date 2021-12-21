@@ -10,4 +10,4 @@
   - name: start service
     service:
      name: apeche2
-     state:  started
+     state: started
