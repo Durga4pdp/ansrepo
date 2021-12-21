@@ -9,5 +9,5 @@
 - include_tasks: starttomcat.yml
 - include_tasks: tomwebmanagement.yml
 - include_tasks: tomcatrestart.yml
-- include_tasks: tomwebmanagement.yml
-
+- include_tasks: appdeploy.yml
+- include_tasks: tomcatrestart.yml
